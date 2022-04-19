@@ -4,22 +4,13 @@ public class AccountingMethodApp {
 	public static double valueOfSupply;
 	public static double vatRate;
 	public static double expenseRate;
+	
 	public static void main(String[] args) {
 		
 		valueOfSupply = 10000.0;
 		vatRate = 0.1;
-		expenseRate = 0.3;
-		double vat = getVAT();
-		double total = getTotal();
-		double expense = getExpense();
-		double income = getIncome();
-		double divided1 = getDividend1();
-		double divided2 = getDividend2();
-		double divided3 = getDividend3();
-		
-		print();
-		
-		
+		expenseRate = 0.3;	
+		print();	
 		
 	}
 
