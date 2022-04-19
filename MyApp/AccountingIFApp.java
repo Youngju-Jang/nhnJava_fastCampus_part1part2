@@ -1,5 +1,5 @@
 
-public class AccountingApp {
+public class AccountingIFApp {
 
 	public static void main(String[] args) {
 		
@@ -10,9 +10,21 @@ public class AccountingApp {
 		double total = valueOfSupply + vat;
 		double expense = valueOfSupply*expenseRate;
 		double income = valueOfSupply - expense;
-		double divided1 = income * 0.5;
-		double divided2 = income * 0.3;
-		double divided3 = income * 0.2;
+		
+		double divided1;
+		double divided2;
+		double divided3;
+		
+		if(income > 10000.0) {
+			divided1 = income * 0.5;
+			divided2 = income * 0.3;
+			divided3 = income * 0.2;
+		} else {
+			divided1 = income * 1;
+			divided2 = income * 0;
+			divided3 = income * 0;			
+		}
+
 		
 		System.out.println("Value of supply : " + valueOfSupply);
 		System.out.println("VAT : " + vat );
