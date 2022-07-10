@@ -22,6 +22,7 @@ public class PrintStringTest {
 		showMyString(lambdaStr);
 		
 		// 3. 반환 값으로 쓰이는 람다식
+		
 		PrintString reStr = returnString();
 		reStr.showString("hello ");
 	}
