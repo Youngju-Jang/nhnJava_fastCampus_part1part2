@@ -17,34 +17,23 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int i = Integer.parseInt(br.readLine());
-		
-		int sum = 1 ;
-		int t = 1;
-		while(true) {
-			if(sum == i) {
-				if(t%2 == 0) {
-					System.out.println(t+"/"+1);
-					break;
-				}else {
-					System.out.println(1+"/"+t);
-					break;
-				}
-			}
-			else if(sum > i) {
-				if(t%2 == 0) {
-					System.out.println(t-(sum-i)+"/"+(1+(sum-i)));
-					break;
-				}else {
-					System.out.println(1+(sum-i)+"/"+(t-(sum-i)));
-					break;
-				}
-			}
-			else {
-				t++;
-				sum += t;
-			}
+		StringBuffer sb = new StringBuffer();
+		int n = Integer.parseInt(br.readLine());
+		for(int i=0; i<n; i++) {
+			
+			StringTokenizer st = new StringTokenizer(br.readLine()," ");
+			int H = Integer.parseInt(st.nextToken());
+			int N = Integer.parseInt(st.nextToken());
+			int yy = N % H;
+			int xx = N / H; 
+			if(yy == 0) {
+				yy += H;
+			}else {
+				xx++;
+			}			
+			sb.append((yy*100)+xx+"\n");
 		}
+		System.out.println(sb.toString());		
 	}
 }
 
