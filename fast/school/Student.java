@@ -10,7 +10,7 @@ public class Student {
 	
 	//학생의 성적 리스트 
 	//addSubjectSocre() 메서드가 호출되면 리스트에 추가 됨
-	private ArrayList<Score> scoreList;
+	private ArrayList<Score> scoreList = new ArrayList<Score>();
 
 	public Student(int studentId, String studentName, Subject majorSubject) {
 		super();
